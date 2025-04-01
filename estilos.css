@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+a{
+    transition: 0.2s;
+}
+
+:root{
+    --lila: rgb(138, 138, 221);
+}
+
+body{
+    font-family: "Raleway", sans-serif;
+    background-color: rgb(218, 218, 218);
+}
+
+h1, h2{
+    font-family: "DM Serif Display", serif;
+}
+
+h1{
+    color: var(--lila);
+    margin-bottom: 0.6em;
+}
+
+header{
+    text-align: center;
+    padding: 1em;    
+    background-color:var(--lila);
+    margin-bottom: 1.5em;
+}
+
+header img{
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+nav a{
+    color: white;
+    font-weight: bold;
+    margin: 0 0.5em;
+}
+
+nav a:hover{
+    color: rgb(88, 11, 85);
+}
+
+.contenedor{
+    margin: 0 auto;
+    width: 88%;
+    max-width: 1200px;
+}
+
+article{
+    margin-bottom: 1em;
+    box-shadow: 0px 0px 10px 0px rgb(77, 77, 77);
+    background-color: white;
+    border-radius: 5px;
+    padding: 1em;
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#tienda p{
+    font-size: 0.9em;
+    line-height: 1.4em;
+}
+
+#tienda a{
+    background-color: var(--lila);
+    color: white;
+    border-radius: 5px;
+    padding: 0.3em 0.5em;
+}
+
+#tienda a:hover{
+    background-color: rgb(110, 70, 148);
+}
+
+#tienda img{
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover; /* img se hace proporcional */
+}
+
+/* MEDIA QUERY PARA TABLET */
+@media all and (min-width:768px){
+    header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.2em;
+    }
+
+    header img{
+        margin-bottom: 0;
+        display: block;
+    }
+
+    h1{
+        font-size: 3em;
+    }
+    
+    #tienda{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+
+    #tienda article{
+        /* lo mismo:
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 300px; minimo que tiene que medir cada articulo */
+        flex: 1 0 300px;
+        margin-bottom: 0; /* saco el margen de abajo del celular */
+    }
+}
+
+
+/* MEDIA QUERY PARA COMPUTADORA */
+@media all and (min-width: 1200px){
+    header
+    {
+        padding: 1.5em;
+    }
+
+    header img{
+        width: 110px;
+    }
+}
